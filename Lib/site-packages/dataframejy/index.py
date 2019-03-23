@@ -167,7 +167,7 @@ class DateTimeIndex(Index):
         '''
         if isinstance(key, datetime.datetime):
             key = miutil.jdatetime(key)
-        elif isinstance(key, (list, tuple, MIArray)) and isinstance(key[0], datetime.datetime):
+        elif isinstance(key, (list, tuple, NDArray)) and isinstance(key[0], datetime.datetime):
             key = miutil.jdatetime(key)
         r = self._index.getIndices(key)
         if outkeys:            
